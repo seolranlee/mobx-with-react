@@ -4,11 +4,11 @@ import SuperMarket from './components/SuperMarket'
 class App extends Component {
   render() {
     return (
-      <>
+      <div>
         <Counter/>
         <hr/>
         <SuperMarket/>
-      </>
+      </div>
     );
   }
 }
