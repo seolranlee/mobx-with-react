@@ -3,7 +3,8 @@ import { makeObservable, observable, action, computed } from 'mobx'
 export default class MarketStore {
   @observable selectedItems = []
 
-  constructor(){
+  constructor(root){
+    this.root = root
     makeObservable(this)
   }
 

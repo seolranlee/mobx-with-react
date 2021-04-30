@@ -1,13 +1,9 @@
-import { Component } from 'react'
 import { makeObservable, observable, action } from 'mobx'
-import { observer } from "mobx-react";
-
-@observer
-class CounterStore extends Component {
+export default class CounterStore {
   @observable number = 0;
   
-  constructor() {
-    super()
+  constructor(root) {
+    this.root = root
     makeObservable(this);
   }
   
@@ -19,5 +15,3 @@ class CounterStore extends Component {
     this.number--
   }
 }
-
-export default CounterStore
