@@ -5,17 +5,13 @@ import { Provider } from 'mobx-react'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-// 만들어둔 스토어를 불러온다
-import CounterStore from './stores/counter'
-import MarketStore from './stores/market'
+import RootStore from './stores'
 
-// 스토어 인스턴스를 만든다
-const counter = new CounterStore()
-const market = new MarketStore()
+const root = new RootStore()
 
 ReactDOM.render(
   // Provider에 props로 전달
-  <Provider counter={counter} market={market}>
+  <Provider {...root}>
     <App />
   </Provider>,
   document.getElementById('root')
