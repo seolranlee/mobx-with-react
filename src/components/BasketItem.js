@@ -1,7 +1,8 @@
 import './BasketItem.css'
 import { observer } from 'mobx-react'
 
-const BasketItem = ({ name, price, count, onTake }) => {
+const BasketItem = ({ item, onTake }) => {
+  const { name, price, count } = item;
   return (
     <div className="BasketItem">
       <div className="name">{name}</div>
